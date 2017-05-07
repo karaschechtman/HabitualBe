@@ -59,6 +59,7 @@ def check_directory(dir,csvname):
 Run be test on all files in a dir and save results to spreadsheet
 '''
 def main():
-	check_directory('gutenberg','gutenberg.csv')
+	dir = raw_input('What directory do you want to run the script on? ')
+	check_directory(dir,dir + '.csv')
 
 main()
