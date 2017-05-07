@@ -1,4 +1,7 @@
 import re
+import csv
+import os
+from os import path
 
 PRONOUNS = ['i','you','he','she','we','they']
 AUX = ['unless','demanding','ef','how','wherever','may','though','providing','dare','whether','that','can','t ','shall','suppose','should','till','since','as','would','could','will','lest','if']
@@ -42,16 +45,20 @@ def check_file(filename):
 	realities = check_auxiliaries(possibilities)
 	return realities
 
+def check_directory(dir,csvname):
+	with open(csvname,'wb') as csvfile:
+		writer = csv.writer(csvfile)
+		writer.writerow(['Title','Year','Comments','Filename'])
+		for file in os.listdir(dir):
+			results = check_file(path.join(dir,file))
+			if len(results) > 0:
+				writer.writerow(['','','',file] + results)
+		csvfile.close()
+
 '''
 Run be test on all files in a dir and save results to spreadsheet
 '''
-def main(dir):
-	for file in os.listdir(dir):
-		results = check_file(path.join(dir,file))
-		if len(results) > 0:
-			i +=1
-			print file + ':'
-			print results
-	print 'Total results: ' + str(i)
+def main():
+	check_directory('gutenberg','gutenberg.csv')
 
-main('gutenberg')
+main()
