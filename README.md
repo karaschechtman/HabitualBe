@@ -14,6 +14,6 @@ Gutenberg metadata for downloading all Gutenberg files. Metadata in HDF file  fr
 ### slavenarratives/ 
 Text of slave narratives. Can run findmatches.py on it
 ### slavenarratives.csv
-- Example output from findmatches.py on slavenarratives/
+Example output from findmatches.py on slavenarratives/
 ### gutenberg.csv
-- Example output from findmatches.py on gutenberg/
+Example output from findmatches.py on gutenberg/
