@@ -1,3 +1,6 @@
+Kara Schechtman <br />
+kws2121@columbia.edu
+
 # HabitualBe
 Project to identify habitual be in black English. 
 
