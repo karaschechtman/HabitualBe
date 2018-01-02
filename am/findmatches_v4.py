@@ -69,7 +69,7 @@ def check_directory(dir,csvname, interval):
 		csvfile.close()
 
 '''
-Run be test on all files in a dir and save results to spreadsheet
+Run am test on all files in a dir and save results to spreadsheet
 '''
 def main():
 	dir = raw_input('What directory do you want to run the script on? ')
